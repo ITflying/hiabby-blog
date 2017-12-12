@@ -361,19 +361,18 @@
                 <db.name>blog</db.name>
                 <connection.driver_class>com.mysql.jdbc.Driver</connection.driver_class>
                 <connection.url>
-                    <![CDATA[jdbc:mysql://123.56.217.182:3306/${db.name}?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true]]>
+                    <![CDATA[jdbc:mysql://localhost:3306/${db.name}?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true]]>
                 </connection.url>
                 <connection.username>blogadmin</connection.username>
                 <connection.password>blogblog</connection.password>
                 <log.dir>D:/blogLogs</log.dir>
 
                 <!-- HiAbby系统登录地址 -->
-                <sys.stillOne.loginURL>http://123.56.217.182/hiabby</sys.stillOne.loginURL>
+                <sys.hiabby.loginURL>http://localhost:8080/hiabby</sys.hiabby.loginURL>
                 <shiro.uid.cookie.domain>hiabby.com</shiro.uid.cookie.domain>
                 <shiro.uid.cookie.path>/</shiro.uid.cookie.path>
 
                 <!-- redis -->
-
             </properties>
         </profile>
     </profiles>
