@@ -1,0 +1,2 @@
+<script src="${pageContext.request.contextPath}/static/addin/nstslider/jquery.nstSlider.min.js"></script>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/addin/nstslider/jquery.nstSlider.min.css"/>

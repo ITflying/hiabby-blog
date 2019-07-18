@@ -1,0 +1,51 @@
+.article-meta {
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    width:100%;
+    text-align: center;
+    color: #999
+}
+
+.article-meta a {
+    color: #999
+}
+
+.article-meta>span>* {
+    vertical-align: middle
+}
+
+.article-meta i {
+    display: inline-block;
+    margin: 0 4px 0 4px
+}
+
+
+.btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-size: .875rem;
+    margin: 4px auto;
+    display: inline-block;
+    border: 2px solid;
+    border-color: rgba(229,230,233,0.5) rgba(223,224,228,0.5) #d0d1d5;
+    border-radius: 3px;
+    text-decoration: none;
+    background: #fff;
+    color: red;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-chevron-left::before {
+    content: "<";
+    font-size: 24px;
+    font-weight: bold;
+}

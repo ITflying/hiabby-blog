@@ -1,2 +1,0 @@
-<script src="${pageContext.request.contextPath}/static/addin/jrange/jquery.range-min.js"></script>
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/addin/jrange/jquery.range.css"/>

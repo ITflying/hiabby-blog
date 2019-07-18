@@ -1,2 +1,0 @@
-<script src="${pageContext.request.contextPath}/static/framework/js/all.js"></script>
-<link rel="Shortcut Icon" href="files/index/fish.ico" type="image/x-icon">

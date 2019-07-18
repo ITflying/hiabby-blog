@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hiabby.web.blog.repository.TagsRepository">
+    <resultMap id="resultMap" type="com.hiabby.web.blog.entity.Tags">
+        <id property="id" column="id" />
+        <result property="name" column="name" />
+        <result property="num" column="num" />
+    </resultMap>
+
+    <select id="selectAllTags"  resultMap="resultMap">
+        SELECT id,name,num
+        FROM tags
+        ORDER BY id ASC
+    </select>
+
+    <select id="selectTagsArticle"  resultType="com.hiabby.web.blog.entity.TagsArticleVO">
+        SELECT tg.id,tg.name,tg.num,ac.title,ac.file_name AS fileName,DATE_FORMAT(ac.pub_date,'%Y/%m/%d') as date
+        FROM tags tg,article ac
+        WHERE  tg.id = ac.tags_id
+        ORDER BY tg.id ASC
+    </select>
+
+    <select id="selectYearArticle"  resultType="com.hiabby.web.blog.entity.YearArticleVO">
+        SELECT
+            DATE_FORMAT(pub_date,'%Y') AS year,
+            DATE_FORMAT(pub_date,'%M') AS month,
+            title,
+            DATE_FORMAT(pub_date,'%Y/%m/%d') AS date
+        FROM article
+    </select>
+
+</mapper>

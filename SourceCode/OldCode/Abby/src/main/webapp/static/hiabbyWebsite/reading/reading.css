@@ -1,0 +1,22 @@
+.centerPic{
+    width:100%;
+    text-align: center;
+}
+
+.readingWords{
+    width:100%;
+    text-align: center;
+    margin:5px;
+}
+
+.readingChineeseWords{
+    color:red;
+    font-size: 26px;
+    font-family: '华文行楷';
+}
+
+.readingEnglishWords{
+    color:#c05b4d;
+    font-size: 17px;
+    font-family: 'Lucida Calligraphy';
+}

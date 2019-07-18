@@ -1,0 +1,20 @@
+.centerPic{
+    width:100%;
+    text-align: center;
+}
+
+.wikiTitle{
+    width:100%;
+    text-align: center;
+    font-size: 22px;
+    font-family: '华文行楷';
+    color:red;
+    margin:10px 0 10px 0;
+}
+
+.wikiIntroduce{
+    width:100%;
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
