@@ -21,8 +21,9 @@
         <logback.version>1.1.6</logback.version>
 
         <!-- json -->
-        <jackson.version>2.7.2</jackson.version>
-        <fastjson.version>1.2.23</fastjson.version>
+        <jackson.version>2.9.9</jackson.version>
+        <jackson-databind.version>2.9.9.2</jackson-databind.version>
+        <fastjson.version>1.2.59</fastjson.version>
 
         <!-- 基础插件 -->
         <commons-lang3.version>3.4</commons-lang3.version>
@@ -165,7 +166,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>${jackson.version}</version>
+            <version>${jackson-databind.version}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
