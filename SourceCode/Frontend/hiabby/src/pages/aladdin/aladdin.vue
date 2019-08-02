@@ -5,6 +5,8 @@
         <div>
             <p>测试一下</p>
         </div>
+        <!-- 底部 -->
+        <app-footer></app-footer>
     </div>
 
 </template>

@@ -3,6 +3,7 @@ import App from './App.vue'
 
 // 引入组件
 import AppHeader from './components/base/header.vue'
+import AppFooter from './components/base/footer.vue'
 
 Vue.config.productionTip = false
 
@@ -13,6 +14,7 @@ import './assets/iconfont/ali-icon/iconfont.js'
 import router from "./router/router.js"
 
 Vue.component('app-header', AppHeader)
+Vue.component('app-footer', AppFooter)
 
 new Vue({
     router, // 注册到根实例中
