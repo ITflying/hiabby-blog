@@ -37,21 +37,21 @@ export default {
       welcomeWords:'Hi,Abby',
       slogan:'Get enough fun from the coding and always keep alive.',
 			menu: [
-        {'href':'/future',text:'点将台'},
+        {'href':'/dashboard',text:'点将台'},
         {'href':'/article',text:'文章'},
         {'href':'/question',text:'解惑'},
         {'href':'/aladdin',text:'阿拉丁'},
         {'href':'/wiki',text:'Wiki'},
-        {'href':'/desination',text:'目的地'},
+        {'href':'/guidepost',text:'路标'},
         {'href':'/aboratory',text:'实验室'}
       ],
       emenu:[
-        {'href':'/future',text:'Future'},
+        {'href':'/dashboard',text:'dashboard'},
         {'href':'/article',text:'Article'},
         {'href':'/question',text:'Question'},
         {'href':'/aladdin',text:'Aladdin'},
         {'href':'/wiki',text:'Wiki'},
-        {'href':'/desination',text:'Desination'},
+        {'href':'/guidepost',text:'Guidepost'},
         {'href':'/aboratory',text:'Aboratory'}
       ],
       otherWeb:[

@@ -1,11 +1,15 @@
 <template>
     <header class="site-header" role="banner" >
         <div class="wrapper">
-            <a class="site-title" href="">
+            <a class="site-title" href="/home">
                 <span style="font-family: Segoe Print;16px;font-size: 19px;font-weight: 300;">Abby </span> 小管家 
+              
+            </a>
+            <a class="site-title" :href="`/${pageUrl}`">
                 <svg class="ali-icon" aria-hidden="true">
                     <use :xlink:href="`${pageImage}`"></use>
                 </svg>
+           
                 {{pageTitle}}
             </a>
             
@@ -33,27 +37,28 @@
 
 export default {
     props:{
+        pageUrl:String,
         pageTitle:String,
         pageImage:String
     },
     data(){
         return{
             pages:[
-                {'href':'/future',text:'点将台',icon:'icon-gaikuang'},
+                {'href':'/dashboard',text:'点将台',icon:'icon-gaikuang'},
                 {'href':'/article',text:'文章',icon:'icon-wenzhang'},
                 {'href':'/question',text:'解惑',icon:'icon-wenti'},
                 {'href':'/aladdin',text:'阿拉丁',icon:'icon-deng-'},
                 {'href':'/wiki',text:'Wiki',icon:'icon-wiki'},
-                {'href':'/desination',text:'目的地',icon:'icon-lubiao'},
+                {'href':'/guidepost',text:'路标',icon:'icon-lubiao'},
                 {'href':'/aboratory',text:'实验室',icon:'icon-shiyan'}
             ],
             eGpages:[
-                {'href':'/future',text:'Future'},
+                {'href':'/dashboard',text:'Dashboard'},
                 {'href':'/article',text:'Article'},
                 {'href':'/question',text:'Question'},
                 {'href':'/aladdin',text:'Aladdin'},
                 {'href':'/wiki',text:'Wiki'},
-                {'href':'/desination',text:'Desination'},
+                {'href':'/guidepost',text:'Guidepost'},
                 {'href':'/aboratory',text:'Aboratory'}
             ]
         }

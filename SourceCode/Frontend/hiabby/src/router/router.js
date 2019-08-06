@@ -3,9 +3,16 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 // 引入组件
-import HelloWorld from '@/components/HelloWorld.vue'
 import home from '@/pages/home/home.vue'
+import dashboard from '@/pages/dashboard/dashboard.vue'
+import article from '@/pages/article/article.vue'
+import viewArticle from '@/pages/article/viewArticle.vue'
+
+import question from '@/pages/question/question.vue'
 import aladdin from '@/pages/aladdin/aladdin.vue'
+import wiki from '@/pages/wiki/wiki.vue'
+import guidepost from '@/pages/guidepost/guidepost.vue'
+import aboratory from '@/pages/aboratory/aboratory.vue'
 
 Vue.use(Router);
 
@@ -21,6 +28,36 @@ const routes = [{
         }
     },
     {
+        path: "/dashboard",
+        component: dashboard,
+        meta: {
+            title: '点将台'
+        }
+    },
+    {
+        path: "/article",
+        component: article,
+        meta: {
+            title: '文章'
+        },
+        children: [{
+                path: 'viewArticle',
+                component: viewArticle
+            },
+            {
+                path: 'test',
+                component: viewArticle
+            }
+        ]
+    },
+    {
+        path: "/question",
+        component: question,
+        meta: {
+            title: '解惑'
+        }
+    },
+    {
         path: "/aladdin",
         component: aladdin,
         meta: {
@@ -28,8 +65,25 @@ const routes = [{
         }
     },
     {
-        path: "/HelloWorld",
-        component: HelloWorld
+        path: "/wiki",
+        component: wiki,
+        meta: {
+            title: 'Wiki'
+        }
+    },
+    {
+        path: "/guidepost",
+        component: guidepost,
+        meta: {
+            title: '路标'
+        }
+    },
+    {
+        path: "/aboratory",
+        component: aboratory,
+        meta: {
+            title: '实验室'
+        }
     }
 ]
 
