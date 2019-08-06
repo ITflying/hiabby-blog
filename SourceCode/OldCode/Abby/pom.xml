@@ -10,7 +10,7 @@
 
     <properties>
         <!-- 核心依赖库 -->
-        <spring.version>4.2.5.RELEASE</spring.version>
+        <spring.version>4.3.17</spring.version>
 
         <jsp.version>2.2</jsp.version>
         <jstl.version>1.2</jstl.version>
