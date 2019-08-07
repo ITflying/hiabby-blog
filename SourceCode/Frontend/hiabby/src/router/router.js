@@ -3,10 +3,14 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 // 引入组件
+import layout from '@/components/layout/custIndex.vue'
 import home from '@/pages/home/home.vue'
 import dashboard from '@/pages/dashboard/dashboard.vue'
+
 import article from '@/pages/article/article.vue'
 import viewArticle from '@/pages/article/viewArticle.vue'
+import articleCategory from '@/pages/article/articleCategory.vue'
+
 
 import question from '@/pages/question/question.vue'
 import aladdin from '@/pages/aladdin/aladdin.vue'
@@ -36,17 +40,20 @@ const routes = [{
     },
     {
         path: "/article",
-        component: article,
+        component: layout,
         meta: {
             title: '文章'
         },
         children: [{
-                path: 'viewArticle',
-                component: viewArticle
+                path: '',
+                component: article
             },
             {
-                path: 'test',
+                path: 'viewArticle',
                 component: viewArticle
+            }, {
+                path: 'articleCategory',
+                component: articleCategory
             }
         ]
     },

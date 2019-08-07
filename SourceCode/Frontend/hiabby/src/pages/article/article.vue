@@ -1,8 +1,5 @@
 <template>
   <div class="continer">
-    <!-- 头部 -->
-    <app-header pageTitle="文章" pageImage="#icon-chixiao" pageUrl="article"></app-header>
-    <!-- 正文 -->
     <div>
       <main class="page-content" aria-label="Content">
         <div class="wrapper">
@@ -19,7 +16,9 @@
                 </h2>
                 <div style="width:100%;min-height:100px;">
                   <div style="float: left;width:60%;">
-                    <span class="post-summary">测试文本，测试文本，测试文本，测试文本，测试文本，测试文本，测试文本，测试文本，测试文文本，测试文本，测试文本，测试文本。</span>
+                    <span
+                      class="post-summary"
+                    >测试文本，测试文本，测试文本，测试文本，测试文本，测试文本，测试文本，测试文本，测试文文本，测试文本，测试文本，测试文本。</span>
                     <a
                       class="btn"
                       href="/article/viewArticle"
@@ -62,13 +61,15 @@
                   <hr />
                 </div>
               </li>
-               <li>
+              <li>
                 <h2>
                   <a class="post-link post-title" href>测试文 | 测试原理剖析剖析</a>
                 </h2>
                 <div style="width:100%;min-height:100px;">
                   <div style="float: left;width:60%;">
-                    <span class="post-summary">测试文本，测试文本，测试文本，测试文本，测试文本，测试文本，测试文本，测试文本，测试文文本，测试文本，测试文本，测试文本。</span>
+                    <span
+                      class="post-summary"
+                    >测试文本，测试文本，测试文本，测试文本，测试文本，测试文本，测试文本，测试文本，测试文文本，测试文本，测试文本，测试文本。</span>
                     <a
                       class="btn"
                       href="/article/viewArticle"
@@ -89,14 +90,11 @@
                   <hr />
                 </div>
               </li>
-
             </ul>
           </div>
         </div>
       </main>
     </div>
-    <!-- 底部 -->
-    <app-footer></app-footer>
   </div>
 </template>
 
