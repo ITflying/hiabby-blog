@@ -3,16 +3,20 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 // 引入组件
-import layout from '@/components/layout/custIndex.vue'
+
 import home from '@/pages/home/home.vue'
 import dashboard from '@/pages/dashboard/dashboard.vue'
 
+
+import articleLayout from '@/components/layout/articleLayout.vue'
 import article from '@/pages/article/article.vue'
 import viewArticle from '@/pages/article/viewArticle.vue'
 import articleCategory from '@/pages/article/articleCategory.vue'
 
-
+import questionLayout from '@/components/layout/questionLayout.vue'
 import question from '@/pages/question/question.vue'
+
+
 import aladdin from '@/pages/aladdin/aladdin.vue'
 import wiki from '@/pages/wiki/wiki.vue'
 import guidepost from '@/pages/guidepost/guidepost.vue'
@@ -35,14 +39,14 @@ const routes = [{
         path: "/dashboard",
         component: dashboard,
         meta: {
-            title: '点将台'
+            title: 'Hiabby ~ 点将台'
         }
     },
     {
         path: "/article",
-        component: layout,
+        component: articleLayout,
         meta: {
-            title: '文章'
+            title: 'Hiabby ~ 文章'
         },
         children: [{
                 path: '',
@@ -59,10 +63,14 @@ const routes = [{
     },
     {
         path: "/question",
-        component: question,
+        component: questionLayout,
         meta: {
-            title: '解惑'
-        }
+            title: 'Hiabby ~ 解惑'
+        },
+        children: [{
+            path: '',
+            component: question
+        }]
     },
     {
         path: "/aladdin",

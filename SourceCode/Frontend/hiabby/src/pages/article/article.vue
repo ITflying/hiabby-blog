@@ -3,7 +3,6 @@
     <div>
       <main class="page-content" aria-label="Content">
         <div class="wrapper">
-          <div class="home">
             <h1 class="page-heading">
               Article
               <span style="font-size:10px;text-align:center;">腹有诗书气自华，读书万卷始通神 - 苏轼</span>
@@ -91,7 +90,6 @@
                 </div>
               </li>
             </ul>
-          </div>
         </div>
       </main>
     </div>
