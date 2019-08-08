@@ -1,5 +1,6 @@
 <template>
   <div class="continer">
+        <div id="index" v-title data-title="文章分类"/>
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <h1 class="page-heading">Article - Category</h1>
@@ -41,7 +42,6 @@
               <div>
                 <span class="post-meta">发布时间 : 2019年03月14日</span>
                 <span class="post-meta">分类 : java</span>
-                <hr />
               </div>
             </li>
 
@@ -50,7 +50,7 @@
                 <a class="post-link post-title" href>测试一下第二个文章哦</a>
               </h2>
 
-              <div>
+              <div class="post-content">
                 <span class="post-summary">测试文本，测试文本，测试文本，测试文本，测试文本，测试文本，测试文本，测试文本，测试文本。</span>
                 <a
                   class="btn"
@@ -63,7 +63,6 @@
               <div>
                 <span class="post-meta">发布时间 : 2019年03月14日</span>
                 <span class="post-meta">分类 : java</span>
-                <hr />
               </div>
             </li>
             <li>
@@ -92,7 +91,6 @@
               <div>
                 <span class="post-meta">发布时间 : 2019年03月14日</span>
                 <span class="post-meta">分类 : java</span>
-                <hr />
               </div>
             </li>
           </ul>

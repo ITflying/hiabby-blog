@@ -1,5 +1,6 @@
 <template>
   <div class="continer">
+      <div id="index" v-title data-title="查看文章"/>
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <div style="width: 100%;text-align: center;">

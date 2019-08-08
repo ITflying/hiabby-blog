@@ -1,28 +1,27 @@
 <template>
   <div class="homeBox">
+      <div id="index" v-title data-title="首页"/>
     <div class="content-home text-center">
       <div style="margin-left: 46%;">
         <div class="commentAvatarDiv">
-          <img src="@/assets/images/web/home/headImg.jpg" class="commentAvatarImage"/>
+          <img src="@/assets/images/web/home/headImg.jpg" class="commentAvatarImage" />
         </div>
       </div>
       <div class="name">{{welcomeWords}}</div>
-      <div class="slogan">
-        {{ slogan }}
-      </div>
+      <div class="slogan">{{ slogan }}</div>
 
       <ul class="text-center nav">
         <li class="item" v-for="(m,i) in menu" :key="m.id">
-           <a :href="`${m.href}`">{{m.text}}</a>
+          <a :href="`${m.href}`">{{m.text}}</a>
           <span class="line_left_right" v-if="i !== menu.length-1">|</span>
         </li>
       </ul>
-      <hr>
+      <hr class="home-hr" />
 
       <ul class="text-center nav">
         <li class="item" v-for="o in otherWeb" :key="o.id">
           <a :class="`${o.classOfa}`" target="_blank" :href="`${o.href}`" title="github">
-            <img :src="`${o.imgsrc}`" :class="`${o.imgclass}`"/>
+            <img :src="`${o.imgsrc}`" :class="`${o.imgclass}`" />
           </a>
         </li>
       </ul>
@@ -33,37 +32,55 @@
 <script>
 export default {
   data() {
-		return {
-      welcomeWords:'Hi,Abby',
-      slogan:'Get enough fun from the coding and always keep alive.',
-			menu: [
-        {'href':'/dashboard',text:'点将台'},
-        {'href':'/article',text:'文章'},
-        {'href':'/question',text:'解惑'},
-        {'href':'/aladdin',text:'阿拉丁'},
-        {'href':'/wiki',text:'Wiki'},
-        {'href':'/guidepost',text:'路标'},
-        {'href':'/aboratory',text:'实验室'}
+    return {
+      welcomeWords: "Hi,Abby",
+      slogan: "Get enough fun from the coding and always keep alive.",
+      menu: [
+        { href: "/dashboard", text: "点将台" },
+        { href: "/article", text: "文章" },
+        { href: "/question", text: "解惑" },
+        { href: "/aladdin", text: "阿拉丁" },
+        { href: "/hamster", text: "仓鼠" },
+        { href: "/guidepost", text: "路标" },
+        { href: "/aboratory", text: "实验室" }
       ],
-      emenu:[
-        {'href':'/dashboard',text:'dashboard'},
-        {'href':'/article',text:'Article'},
-        {'href':'/question',text:'Question'},
-        {'href':'/aladdin',text:'Aladdin'},
-        {'href':'/wiki',text:'Wiki'},
-        {'href':'/guidepost',text:'Guidepost'},
-        {'href':'/aboratory',text:'Aboratory'}
+      emenu: [
+        { href: "/dashboard", text: "dashboard" },
+        { href: "/article", text: "Article" },
+        { href: "/question", text: "Question" },
+        { href: "/aladdin", text: "Aladdin" },
+        { href: "/hamster", text: "hamster" },
+        { href: "/guidepost", text: "Guidepost" },
+        { href: "/aboratory", text: "Aboratory" }
       ],
-      otherWeb:[
-          {classOfa:'github',href:'https://github.com/ITflying',title:'gayhub',imgsrc:require('@/assets/images/web/home/githubBefore.png'),imgclass:'githubIcon'},
-          {classOfa:'zhihu',href:'https://www.zhihu.com/',title:'zhihu',imgsrc:require('@/assets/images/web/home/zhihuBefore.png'),imgclass:'indexIcon'},
-          {classOfa:'steam',href:'http://store.steampowered.com/',title:'steam',imgsrc:require('@/assets/images/web/home/steambefore.png'),imgclass:'indexIcon'}
+      otherWeb: [
+        {
+          classOfa: "github",
+          href: "https://github.com/ITflying",
+          title: "gayhub",
+          imgsrc: require("@/assets/images/web/home/githubBefore.png"),
+          imgclass: "githubIcon"
+        },
+        {
+          classOfa: "zhihu",
+          href: "https://www.zhihu.com/",
+          title: "zhihu",
+          imgsrc: require("@/assets/images/web/home/zhihuBefore.png"),
+          imgclass: "indexIcon"
+        },
+        {
+          classOfa: "steam",
+          href: "http://store.steampowered.com/",
+          title: "steam",
+          imgsrc: require("@/assets/images/web/home/steambefore.png"),
+          imgclass: "indexIcon"
+        }
       ]
-		};
+    };
   }
-}
+};
 </script>
 
 <style scoped>
- @import '../../assets/less/home/home.less';
+@import "../../assets/less/home/home.less";
 </style>

@@ -48,7 +48,7 @@ export default {
                 {'href':'/article',text:'文章',icon:'icon-wenzhang'},
                 {'href':'/question',text:'解惑',icon:'icon-wenti'},
                 {'href':'/aladdin',text:'阿拉丁',icon:'icon-deng-'},
-                {'href':'/wiki',text:'Wiki',icon:'icon-wiki'},
+                {'href':'/hamster',text:'仓鼠',icon:'icon-wiki'},
                 {'href':'/guidepost',text:'路标',icon:'icon-lubiao'},
                 {'href':'/aboratory',text:'实验室',icon:'icon-shiyan'}
             ],
@@ -57,7 +57,7 @@ export default {
                 {'href':'/article',text:'Article'},
                 {'href':'/question',text:'Question'},
                 {'href':'/aladdin',text:'Aladdin'},
-                {'href':'/wiki',text:'Wiki'},
+                {'href':'/hamster',text:'hamster'},
                 {'href':'/guidepost',text:'Guidepost'},
                 {'href':'/aboratory',text:'Aboratory'}
             ]

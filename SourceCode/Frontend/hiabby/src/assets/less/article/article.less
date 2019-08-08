@@ -16,6 +16,25 @@
 .post-list>li {
     clear: both;
     margin-bottom: 30px;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-top: 10px;
+    padding: 10px;
+    padding-left: 32px;
+    border-radius: 10px;
+    background: #fff;
+    -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
 }
 
 .organize-item {
@@ -72,6 +91,10 @@
     color: #2a7ae2
 }
 
+.post-content{
+    min-height: 80px;
+}
+
 .pagination {
     list-style: none;
     text-align: center;
@@ -116,7 +139,7 @@ hr {
     width: 200px;
 }
 
-// 下面为文章详情内的样式
+/* 下面为文章详情内的样式 */
 .wrapper {
     max-width: -webkit-calc(1000px - (30px * 2));
     max-width: calc(1000px - (30px * 2));

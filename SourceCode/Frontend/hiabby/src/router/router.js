@@ -5,8 +5,9 @@ import Router from 'vue-router';
 // 引入组件
 
 import home from '@/pages/home/home.vue'
-import dashboard from '@/pages/dashboard/dashboard.vue'
 
+import dashboardLayout from '@/components/layout/dashboardLayout.vue'
+import dashboard from '@/pages/dashboard/dashboard.vue'
 
 import articleLayout from '@/components/layout/articleLayout.vue'
 import article from '@/pages/article/article.vue'
@@ -16,11 +17,20 @@ import articleCategory from '@/pages/article/articleCategory.vue'
 import questionLayout from '@/components/layout/questionLayout.vue'
 import question from '@/pages/question/question.vue'
 
-
+import aladdinLayout from '@/components/layout/aladdinLayout.vue'
 import aladdin from '@/pages/aladdin/aladdin.vue'
-import wiki from '@/pages/wiki/wiki.vue'
+
+import hamsterLayout from '@/components/layout/hamsterLayout.vue'
+import hamster from '@/pages/hamster/hamster.vue'
+
+import guidepostLayout from '@/components/layout/guidepostLayout.vue'
 import guidepost from '@/pages/guidepost/guidepost.vue'
+
+import aboratoryLayout from '@/components/layout/aboratoryLayout.vue'
 import aboratory from '@/pages/aboratory/aboratory.vue'
+
+import systemLayout from '@/components/layout/systemLayout.vue'
+import cannotfind from '@/pages/system/cannotfind.vue'
 
 Vue.use(Router);
 
@@ -37,10 +47,14 @@ const routes = [{
     },
     {
         path: "/dashboard",
-        component: dashboard,
+        component: dashboardLayout,
         meta: {
             title: 'Hiabby ~ 点将台'
-        }
+        },
+        children: [{
+            path: '',
+            component: dashboard
+        }]
     },
     {
         path: "/article",
@@ -74,30 +88,53 @@ const routes = [{
     },
     {
         path: "/aladdin",
-        component: aladdin,
+        component: aladdinLayout,
         meta: {
-            title: '阿拉丁'
-        }
+            title: 'Hiabby ~ 阿拉丁'
+        },
+        children: [{
+            path: '',
+            component: aladdin
+        }]
     },
     {
-        path: "/wiki",
-        component: wiki,
+        path: "/hamster",
+        component: hamsterLayout,
         meta: {
-            title: 'Wiki'
-        }
+            title: 'Hiabby ~ 仓鼠'
+        },
+        children: [{
+            path: '',
+            component: hamster
+        }]
     },
     {
         path: "/guidepost",
-        component: guidepost,
+        component: guidepostLayout,
         meta: {
             title: '路标'
-        }
+        },
+        children: [{
+            path: '',
+            component: guidepost
+        }]
     },
     {
         path: "/aboratory",
-        component: aboratory,
+        component: aboratoryLayout,
         meta: {
-            title: '实验室'
+            title: 'Hiabby ~ 实验室'
+        },
+        children: [{
+            path: '',
+            component: aboratory
+        }]
+    },
+    {
+        path: "*",
+        component: cannotfind,
+        meta: {
+            title: 'Hiabby ~ 404 找不到页面'
         }
     }
 ]
@@ -113,6 +150,14 @@ router.beforeEach((to, from, next) => {
         document.title = to.meta.title
     }
     next()
+})
+
+Vue.directive('title', (el) => {
+    if (el.dataset.title === undefined) {
+        document.title = `Hiabby`;
+    } else {
+        document.title = `${el.dataset.title} | Hiabby`;
+    }
 })
 
 export default router;
