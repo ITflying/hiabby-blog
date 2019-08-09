@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.flycloud.web.mapper.ArticleMapper">
+    <!--    <resultMap id="BaseResultMap" type="com.flycloud.web.entity.Article" >-->
+    <!--        <id column="id" property="id"/>-->
+    <!--        <result column="title" property="title"/>-->
+    <!--        <result column="pub_date" property="pubDate"/>-->
+    <!--        <result column="summary" property="summary"/>-->
+    <!--        <result column="content" property="content"/>-->
+    <!--    </resultMap>-->
+
+
+    <select id="listArticle" resultType="com.flycloud.web.entity.vo.ArticleListVO">
+        SELECT ac.id, ac.title, ac.pub_date as pubDate, ac.summary,
+        (SELECT group_concat(s.name) FROM tags s LEFT JOIN article_tags_rel r on s.id = r.tags_id where r.article_id = ac.id and s.type = 1 ) as tagNames
+        FROM article ac
+        WHERE ac.is_delete = 0 and ac.is_hide = 0
+        ORDER BY ac.pub_date DESC
+    </select>
+
+
+</mapper>

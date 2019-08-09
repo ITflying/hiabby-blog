@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.flycloud.web.mapper.TagsMapper">
+        <resultMap id="BaseResultMap" type="com.flycloud.web.entity.Article" >
+            <id column="id" property="id"/>
+            <result column="name" property="name"/>
+            <result column="name_en" property="nameEn"/>
+            <result column="parent_id" property="summary"/>
+            <result column="content" property="content"/>
+        </resultMap>
+
+
+    <select id="listArticleTags" resultMap="BaseResultMap">
+        select id, name, name_en, parent_id, type from tags
+        where is_delete = 0 and type = 1
+    </select>
+
+
+</mapper>
