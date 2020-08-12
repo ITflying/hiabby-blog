@@ -12,7 +12,7 @@
         "echarts": "^4.2.1",
         "vue": "^2.6.10",
         "vue-router": "^3.0.7",
-        "serialize-javascript": ">=2.1.1",
+        "serialize-javascript": ">=3.1.0",
         "eslint-utils": ">=1.4.1"
     },
     "devDependencies": {
